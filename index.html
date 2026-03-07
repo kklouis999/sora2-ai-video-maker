@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sora 2 AI Video Maker - 文本生成视频 | 免费AI视频生成工具</title>
+  <meta name="description" content="使用Sora 2 AI技术，通过文本提示词轻松生成高质量视频。完全免费，无需注册，立即体验AI视频创作。">
+  <meta name="keywords" content="Sora 2, AI视频生成, 文本转视频, AI视频工具, 免费视频生成, Sora视频">
+  <meta name="author" content="Sora2 AI Video Maker">
+  <meta property="og:title" content="Sora 2 AI Video Maker - 文本生成视频">
+  <meta property="og:description" content="使用Sora 2 AI技术，通过文本提示词轻松生成高质量视频">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://sora2-ai-video-maker.com/">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">▶</span>
+        <span class="logo-text">Sora<span class="logo-highlight">2</span> Video</span>
+      </a>
+      <nav class="nav">
+        <a href="#generator" class="nav-link active">生成视频</a>
+        <a href="#examples" class="nav-link">示例</a>
+        <a href="#features" class="nav-link">功能</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">✨ Sora 2 技术驱动</div>
+        <h1 class="hero-title">Video Maker</h1>
+        <p class="hero-subtitle">输入文本提示词，AI 自动生成精彩视频</p>
+        <p class="hero-desc">支持中英文描述，生成 5-15 秒高清视频，无需任何视频制作经验</p>
+      </div>
+    </section>
+
+    <!-- Generator Section -->
+    <section id="generator" class="generator">
+      <div class="container">
+        <div class="generator-card">
+          <form id="video-form" class="video-form">
+            <div class="form-group">
+              <label for="prompt" class="form-label">
+                <span class="label-icon">💬</span>
+                描述你想要生成的视频
+              </label>
+              <textarea 
+                id="prompt" 
+                name="prompt" 
+                class="form-textarea"
+                rows="4"
+                placeholder="例如：在阳光明媚的海滩上，波浪轻轻拍打海岸，金色的夕阳缓缓落下..."
+                required
+                maxlength="500"
+              ></textarea>
+              <div class="form-hint">
+                <span id="char-count">0/500</span>
+                <button type="button" id="example-btn" class="example-btn">
+                  ✨ 随机示例
+                </button>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group form-group-inline">
+                <label for="duration" class="form-label">视频时长</label>
+                <select id="duration" name="duration" class="form-select">
+                  <option value="5">5 秒</option>
+                  <option value="10" selected>10 秒</option>
+                  <option value="15">15 秒</option>
+                </select>
+              </div>
+
+              <div class="form-group form-group-inline">
+                <label for="resolution" class="form-label">分辨率</label>
+                <select id="resolution" name="resolution" class="form-select">
+                  <option value="720p">720p</option>
+                  <option value="1080p" selected>1080p</option>
+                </select>
+              </div>
+
+              <div class="form-group form-group-inline">
+                <label for="style" class="form-label">视频风格</label>
+                <select id="style" name="style" class="form-select">
+                  <option value="realistic" selected>真实写实</option>
+                  <option value="cinematic">电影质感</option>
+                  <option value="anime">二次元动画</option>
+                  <option value="cyberpunk">赛博朋克</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="generate-btn">
+              <span class="btn-icon">⚡</span>
+              <span class="btn-text">开始生成视频</span>
+            </button>
+
+            <p id="form-message" class="form-message"></p>
+          </form>
+
+          <!-- Result Section -->
+          <div id="result-section" class="result-section" hidden>
+            <div class="result-header">
+              <h2 class="result-title">生成结果</h2>
+              <span id="result-status" class="result-status">生成中...</span>
+            </div>
+            <div id="result-content" class="result-content">
+              <!-- Dynamic content -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="examples">
+      <div class="container">
+        <h2 class="section-title">示例提示词</h2>
+        <p class="section-desc">点击提示词即可自动填入，体验AI视频生成的魅力</p>
+        
+        <div class="examples-grid">
+          <button class="example-card" data-prompt="在阳光明媚的海滩上，波浪轻轻拍打海岸，金色的夕阳缓缓落下，海鸥在空中盘旋">
+            <div class="example-preview example-preview-1"></div>
+            <p class="example-text">在阳光明媚的海滩上，波浪轻轻拍打海岸...</p>
+          </button>
+          
+          <button class="example-card" data-prompt="赛博朋克城市夜景，霓虹灯光闪烁，无人驾驶汽车在街道上行驶，天空下着酸雨">
+            <div class="example-preview example-preview-2"></div>
+            <p class="example-text">赛博朋克城市夜景，霓虹灯光闪烁...</p>
+          </button>
+          
+          <button class="example-card" data-prompt="一只可爱的猫咪在草地上追逐蝴蝶，阳光透过树叶洒下斑驳的光影">
+            <div class="example-preview example-preview-3"></div>
+            <p class="example-text">一只可爱的猫咪在草地上追逐蝴蝶...</p>
+          </button>
+          
+          <button class="example-card" data-prompt="航拍视角下的雪山山脉，白雪皑皑，云海翻腾，阳光照耀下闪闪发光">
+            <div class="example-preview example-preview-4"></div>
+            <p class="example-text">航拍视角下的雪山山脉...</p>
+          </button>
+          
+          <button class="example-card" data-prompt="未来科技的实验室里，机器人正在组装精密零件，蓝色全息投影显示着数据">
+            <div class="example-preview example-preview-5"></div>
+            <p class="example-text">未来科技的实验室里，机器人正在组装...</p>
+          </button>
+          
+          <button class="example-card" data-prompt="古老的中国寺庙，樱花盛开，僧人在庭院中扫地，钟声悠扬">
+            <div class="example-preview example-preview-6"></div>
+            <p class="example-text">古老的中国寺庙，樱花盛开...</p>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2 class="section-title">为什么选择我们</h2>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3 class="feature-title">快速生成</h3>
+            <p class="feature-desc">先进的AI模型，几分钟内完成视频生成，无需长时间等待</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🎬</div>
+            <h3 class="feature-title">多种风格</h3>
+            <p class="feature-desc">支持写实、动画、电影、赛博朋克等多种风格，满足不同需求</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🆓</div>
+            <h3 class="feature-title">免费使用</h3>
+            <p class="feature-desc">基础功能完全免费，无需注册即可体验AI视频创作</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3 class="feature-title">高清输出</h3>
+            <p class="feature-desc">支持720p和1080p分辨率，适配各种平台发布需求</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="container">
+        <h2 class="section-title">常见问题</h2>
+        
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">Sora 2 AI Video Maker是什么？</summary>
+            <p class="faq-answer">Sora 2 AI Video Maker是一款基于Sora 2技术的AI视频生成工具，用户只需输入文本描述，即可自动生成对应的视频内容。无需任何视频制作经验，只需描述你的想法，AI会帮你完成创作。</p>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">生成视频需要多长时间？</summary>
+            <p class="faq-answer">视频生成时间取决于多个因素，包括服务器负载、提示词复杂度和所选时长。一般情况下，5-15秒的视频生成需要2-5分钟。</p>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">生成的视频可以商用吗？</summary>
+            <p class="faq-answer">是的，用户生成的视频可以用于个人和商业用途。我们建议查看最新的服务条款了解具体细节。</p>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">支持哪些语言输入？</summary>
+            <p class="faq-answer">支持中英文输入。英文提示词通常能获得更好的生成效果，建议使用英文描述复杂场景。</p>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">视频生成失败怎么办？</summary>
+            <p class="faq-answer">如果生成失败，可能是由于提示词描述不清晰或系统负载过高。建议：1）尝试简化提示词；2）稍后重试；3）调整视频参数设置。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-text">Sora<span class="logo-highlight">2</span> Video</span>
+          <p class="footer-tagline">让每个人都能轻松创作视频</p>
+        </div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">使用条款</a>
+          <a href="#" class="footer-link">隐私政策</a>
+          <a href="#" class="footer-link">联系我们</a>
+        </div>
+      </div>
+      <p class="footer-copyright">© 2026 Sora2 AI Video Maker. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
