@@ -1,0 +1,46 @@
+[00:00:00.546] Server  LOG     ✓ Ready in 338ms
+[00:00:00.825] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:32.024] Server  LOG     Processing video request: {}
+[00:00:32.025] Server  LOG     Google Project ID configured: false
+[00:00:32.025] Server  LOG     Calling Veo 3.1 API...
+[00:00:32.026] Server  LOG     Initializing ZhipuAI (CogVideoX-3) client...
+[00:00:32.026] Server  LOG     Prompt: "金色的沙滩上，有一抹夕阳，一个少女在洗澡"
+[00:00:32.026] Server  LOG     Submitting video generation request to CogVideoX-3...
+[00:00:32.286] Server  ERROR   CogVideoX API Error: Error: ZhipuAI API error: 429 - {"error":{"code":"1302","message":"您的账户已达到速率限制，请您控制请求频率"}}
+[00:00:32.323] Server  ERROR   Veo 3.1 API Error: Error: ZhipuAI API error: 429 - {"error":{"code":"1302","message":"您的账户已达到速率限制，请您控制请求频率"}}
+[00:02:57.210] Server  LOG     Processing video request: {}
+[00:02:57.210] Server  LOG     Google Project ID configured: false
+[00:02:57.210] Server  LOG     Calling Veo 3.1 API...
+[00:02:57.210] Server  LOG     Initializing ZhipuAI (CogVideoX-3) client...
+[00:02:57.210] Server  LOG     Prompt: "金色的沙滩上，有一抹夕阳，一个少女在洗澡"
+[00:02:57.211] Server  LOG     Submitting video generation request to CogVideoX-3...
+[00:02:57.500] Server  LOG     Video generation task submitted: {}
+[00:02:57.500] Server  LOG     Polling for video generation result...
+[00:03:02.660] Server  LOG     Video generation status: PROCESSING (attempt 1/120)
+[00:03:07.810] Server  LOG     Video generation status: PROCESSING (attempt 2/120)
+[00:03:12.959] Server  LOG     Video generation status: PROCESSING (attempt 3/120)
+[00:03:18.111] Server  LOG     Video generation status: PROCESSING (attempt 4/120)
+[00:03:23.251] Server  LOG     Video generation status: PROCESSING (attempt 5/120)
+[00:03:28.396] Server  LOG     Video generation status: PROCESSING (attempt 6/120)
+[00:03:33.500] Server  LOG     Video generation status: PROCESSING (attempt 7/120)
+[00:03:38.655] Server  LOG     Video generation status: PROCESSING (attempt 8/120)
+[00:03:43.767] Server  LOG     Video generation status: PROCESSING (attempt 9/120)
+[00:03:48.930] Server  LOG     Video generation status: PROCESSING (attempt 10/120)
+[00:03:54.066] Server  LOG     Video generation status: PROCESSING (attempt 11/120)
+[00:03:59.235] Server  LOG     Video generation status: PROCESSING (attempt 12/120)
+[00:04:04.377] Server  LOG     Video generation status: PROCESSING (attempt 13/120)
+[00:04:09.496] Server  LOG     Video generation status: PROCESSING (attempt 14/120)
+[00:04:14.614] Server  LOG     Video generation status: PROCESSING (attempt 15/120)
+[00:04:19.740] Server  LOG     Video generation status: PROCESSING (attempt 16/120)
+[00:04:24.896] Server  LOG     Video generation status: PROCESSING (attempt 17/120)
+[00:04:30.004] Server  LOG     Video generation status: PROCESSING (attempt 18/120)
+[00:04:35.114] Server  LOG     Video generation status: PROCESSING (attempt 19/120)
+[00:04:40.220] Server  LOG     Video generation status: PROCESSING (attempt 20/120)
+[00:04:45.370] Server  LOG     Video generation status: PROCESSING (attempt 21/120)
+[00:04:50.496] Server  LOG     Video generation status: PROCESSING (attempt 22/120)
+[00:04:55.612] Server  LOG     Video generation status: PROCESSING (attempt 23/120)
+[00:05:00.735] Server  LOG     Video generation status: PROCESSING (attempt 24/120)
+[00:05:05.877] Server  LOG     Video generation status: PROCESSING (attempt 25/120)
+[00:05:10.993] Server  LOG     Video generation status: SUCCESS (attempt 26/120)
+[00:05:10.993] Server  LOG     Video generated successfully!
+[00:05:10.993] Server  LOG     Video URL: "https://maas-watermark-prod-new.cn-wlcb.ufileos.com/20260309183520f31414acbbed4e46_watermark.mp4?UCloudPublicKey=TOKEN_6df395df-5d8c-4f69-90f8-a4fe46088958&Signature=DbruSr1kbEjpL0RcAFhXcgjO06g%3D&Expires=1773138924"

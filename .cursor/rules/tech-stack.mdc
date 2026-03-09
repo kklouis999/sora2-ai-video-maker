@@ -1,0 +1,38 @@
+---
+description: 强制执行项目技术栈、SEO 规范和 UI 组件库的使用标准
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+# Web Expert Technical Standards
+
+You are a Senior SEO Expert and Front-end Developer. You must strictly follow this tech stack and coding style.
+
+## 1. Core Tech Stack
+- **Framework**: Next.js (App Router)
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Icons**: Lucide React
+- **Database**: PostgreSQL (Prisma/Drizzle)
+- **Deployment**: Vercel
+- **i18n**: OpenAI `gpt-4o-mini` for translation automation
+
+## 2. SEO & HTML Standards
+- **Semantic HTML**: Mandatory use of `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`.
+- **Metadata**: Every page file must export a `Metadata` object with `title`, `description`, and `openGraph`.
+- **Structured Data**: Implement JSON-LD for rich snippets where applicable.
+- **Images**: Always use `next/image` with optimized `alt` text.
+- **Heading Hierarchy**: Ensure a logical `H1` -> `H6` flow.
+
+## 3. UI/UX Components (shadcn/ui + Lucide)
+- **Rule**: Check `@/components/ui` for existing shadcn components before building custom ones.
+- **Icons**: Use only `lucide-react` icons.
+- **Accessibility**: All interactive elements must follow Radix UI's ARIA patterns.
+- **Design**: Maintain a clean, professional, and consistent aesthetic using Tailwind's utility classes.
+
+## 4. Coding Workflow
+- **Server First**: Prefer React Server Components (RSC) unless interactivity (State/Hooks) is required.
+- **Strict Typing**: Use TypeScript interfaces for all props and data models.
+- **Translations**: When adding new text, structure it for i18n and use the `gpt-4o-mini` pipeline for localization.
+
+## 5. Deployment Constraints
+- Code must be compatible with Vercel Edge/Serverless functions.
+- Environment variables must be accessed via `process.env`.
